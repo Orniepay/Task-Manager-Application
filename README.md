@@ -1,4 +1,4 @@
-# Task Master
+# Tasklify
 
 A full-stack task management application built with React, Node.js, Express, and MySQL. Containerized with Docker and deployed on AWS.
 
@@ -41,7 +41,7 @@ A full-stack task management application built with React, Node.js, Express, and
 
 1. Clone the repository
 ```bash
-git clone https://github.com/Orniepay/Task-Manager-Application.git
+git clone https://github.com/Orniepay/Tasklify.git
 cd Task-Manager-Application
 ```
 
@@ -81,7 +81,7 @@ npm start
 
 ## Project Structure
 ```
-Task-Manager-Application/
+Tasklify/
 ├── client/                 # React frontend
 │   ├── public/             # Static files
 │   ├── src/                # Source files
