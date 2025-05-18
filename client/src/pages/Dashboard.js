@@ -13,7 +13,7 @@ const Dashboard = () => {
 
                 <div className='stat-card'>
                     <h3>Completed</h3>
-                    <p className='stat-card'>0</p>
+                    <p className='stat-number'>0</p>
                 </div>
 
                 <div className='stat-card'>

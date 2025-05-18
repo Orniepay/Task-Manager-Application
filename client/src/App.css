@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: Arial, sans-serif
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .App-header {
@@ -16,4 +16,88 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.form-group { 
+  margin-bottom: 1rem;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto; margin-right: auto;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.dashboard-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.stat-card { 
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.dashboard-actions {
+  margin: 2rem 0;
+}
+
+.task-list {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
