@@ -1,41 +1,64 @@
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-// Import pages 
+// Context
+import { AuthProvider } from './contexts/AuthContext';
+
+// Components
+import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
+
+// Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-
+import Tasks from './pages/Tasks';
+import Categories from './pages/Categories';
 
 function App() {
   return (
-    <Router>
-      <div className='App'>
-        <header className='App-header'>
-          <h1>Tasklify</h1>
-          <nav>
-            <ul>
-              <li><Link to='/'>Home</Link></li>
-              <li><Link to='/login'>Login</Link></li>
-              <li><Link to='/register'>Register</Link></li>
-              <li><Link to='/dashboard'>Dashboard</Link></li>
-            </ul>
-          </nav>
-        </header>
-        <main>
-          <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/login' element={<Login />}/>
-            <Route path='/register' element={<Register />}/>
-            <Route path='/dashboard' element={<Dashboard />}/>
-          </Routes>
-        </main>
-
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route 
+                path="/dashboard" 
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route 
+                path="/tasks" 
+                element={
+                  <ProtectedRoute>
+                    <Tasks />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route 
+                path="/categories" 
+                element={
+                  <ProtectedRoute>
+                    <Categories />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route path="*" element={<p>Page not found!</p>} />
+            </Routes>
+          </main>
+        </div>
+      </Router>
+    </AuthProvider>
   );
-};
+}
 
 export default App;
