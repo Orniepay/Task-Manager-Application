@@ -55,7 +55,7 @@ const Login = () => {
   return (
     <div className="auth-page">
       <div className="auth-container">
-        <h2>Login to Task Master</h2>
+        <h2>Login to Tasklify</h2>
         
         {error && <div className="error-message">{error}</div>}
         

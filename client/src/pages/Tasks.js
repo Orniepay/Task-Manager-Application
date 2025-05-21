@@ -124,7 +124,7 @@ const Tasks = () => {
       <div className="tasks-header">
         <h2>Tasks</h2>
         <button 
-          className="add-task-btn" 
+          className="add-task-btn page-add-task-btn"
           onClick={() => setShowForm(!showForm)}
         >
           {showForm ? 'Cancel' : '+ Add Task'}
