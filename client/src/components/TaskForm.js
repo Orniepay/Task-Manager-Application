@@ -101,8 +101,9 @@ const TaskForm = ({ onSubmit, categories }) => {
             )}
           </select>
         </div>
-        
+
         <button type="submit" className="submit-btn">Add Task</button>
+        
       </form>
     </div>
   );
